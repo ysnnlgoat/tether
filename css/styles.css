@@ -1,42 +1,113 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
 #messagewrapper {
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    height: calc(100vh - 60px);
+    flex: 1;
+    background-color: #ffffff;
 }
 
 .chatwrapper {
     display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.contentbox {
+    display: flex;
     flex-direction: column;
+    max-width: 80%;
 }
 
 .chatuser {
-    margin: 20px 0px 0px 0px;
-    font-weight: bold;
-    background-color: #eee;
+    font-size: 0.75rem;
+    background-color: #e0e7ff;
+    color: #1e3a8a;
+    padding: 2px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    max-width: fit-content;
 }
 
-.chatmessage {
-    margin: 0px;
-    background-color: #eee;
-}
-
-.rchatmessage {
-    margin: 0px;
-    background-color: #eee;
+.mymessage, .othermessage {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 16px;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+    min-width: 80px;
+    max-width: 500px;
 }
 
 .mymessage {
-    margin: 20px 0px 0px 0px;
-    background-color: #cfc;
+    background-color: #ccfbf1;
 }
 
-.rmymessage {
-    margin: 0px;
-    background-color: #cfc;
+.othermessage {
+    background-color: #e5e7eb;
+}
+
+.replybox {
+    background-color: #f3f4f6;
+    border-left: 3px solid #9ca3af;
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.replyline1 {
+    font-size: 0.7rem;
+    color: #6b7280;
+    margin-bottom: 2px;
+}
+
+.replyline2 {
+    font-size: 0.85rem;
+    color: #374151;
 }
 
 .reply {
     float: right;
+    margin-left: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 6px;
+}
+
+.reply:hover {
+    background-color: #2563eb;
+}
+#messagewrapper {
+  scroll-behavior: smooth;
 }
